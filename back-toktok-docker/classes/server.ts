@@ -50,7 +50,7 @@ export default class Server {
 
   private connectMongodb() {
     mongoose
-      .connect("mongodb://localhost:27017/toktok")
+      .connect(config.mongo.url)
       .then(() => {
         console.info("Connected to mongoDB");
       })
