@@ -1,0 +1,34 @@
+<div class="roomContainer" *ngIf="rooms.length !== 0; else noRoom">
+  <mat-card class="example-card" *ngFor="let room of rooms; let i = index">
+    <div class="containerAllUsers">
+      <mat-card-title>{{ room.name }}</mat-card-title>
+      <div class="containerbuttos">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="goIn(room._id)"
+          *ngIf="route !== '/admin'"
+        >
+          Go chat!
+        </button>
+        <button
+          mat-raised-button
+          class="deleteButton"
+          color="warn"
+          (click)="deleteRoom(room._id.toString())"
+          *ngIf="route == '/admin'"
+        >
+          Delete Room!
+        </button>
+      </div>
+    </div>
+    <div class="containerAdmin">
+      <app-input-change [roomIdInput]="room._id"></app-input-change>
+    </div>
+  </mat-card>
+</div>
+<ng-template #noRoom>
+  <mat-card class="example-card">
+    <mat-card-title>No available room up to now</mat-card-title>
+  </mat-card>
+</ng-template>

@@ -1,0 +1,14 @@
+<mat-toolbar>
+  <div class="brandcontainer">
+    <button class="brand" mat-button (click)="backToHome()">
+      <h5>TokTok</h5>
+    </button>
+  </div>
+  <span class="spacer"></span>
+  <div class="buttonsContainer">
+    <span class="userName">{{ userName }}</span>
+    <button mat-button (click)="goToAdmin()" *ngIf="isAdmin">Admin</button>
+    <button mat-button (click)="backToHome()">Rooms</button>
+    <button mat-button (click)="logOut()">LogOut</button>
+  </div>
+</mat-toolbar>

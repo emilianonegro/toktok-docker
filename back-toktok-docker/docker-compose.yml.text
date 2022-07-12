@@ -1,0 +1,14 @@
+version: "2"
+services:
+  backend:
+    build: .
+    container_name: backend
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017

@@ -1,0 +1,156 @@
+.roomChatContainer {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.roomChat {
+  height: max-content;
+}
+
+mat-card {
+  width: 400px;
+  border-radius: 10px;
+}
+mat-card-content {
+  width: 100%;
+  min-height: 300px;
+  background-color: gray;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#containerTitle {
+  margin-bottom: 15px;
+}
+
+.InputContainer {
+  display: flex;
+  height: 30px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+input {
+  width: 85%;
+  height: 100%;
+  outline: none;
+}
+
+.inputChat {
+  width: 80%;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border: 1px solid rgb(155, 62, 196);
+  border-radius: 10px;
+  padding: 0 5px;
+}
+
+/* Chat bubble */
+.chat-messages-show-container {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 15px 10px;
+}
+
+.chat-messages-show-container > li {
+  list-style: none;
+  max-width: 80%;
+}
+.chat-messages-show-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.message {
+  font-size: 14px;
+  color: #f9fbff;
+  padding: 0.15rem 0.35rem;
+  margin: 10px;
+  min-width: 50px;
+  width: fit-content;
+  position: relative;
+  max-width: 75%;
+  word-wrap: break-word;
+  line-height: 1.25rem;
+  border-radius: 10px;
+}
+.message-from-other {
+  background: #545454;
+}
+.message-from-me {
+  background: rgb(155, 62, 196);
+  align-self: end;
+}
+
+.message-sender-name {
+  position: absolute;
+  top: -20px;
+  color: rgb(64, 64, 64) !important;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.message-sender-name-from-me {
+  right: 15px;
+}
+
+.message-sender-name {
+  position: absolute;
+  top: -20px;
+  color: darkgray;
+  font-size: 12px;
+}
+
+.rooms-container {
+  display: flex;
+  gap: 30px;
+}
+
+.containerChooseRoom {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 620px;
+  height: 440px;
+  justify-content: center;
+  align-items: center;
+  background-color: #424242;
+  color: #f9fbff;
+  border-radius: 10px;
+}
+.containerChooseRoom > h2 {
+  margin-top: 20px;
+}
+
+.containerChooseRoom > img {
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  .roomChatContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 0px;
+  }
+
+  .containerChooseRoom {
+    width: 350px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  mat-card {
+    width: 350px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

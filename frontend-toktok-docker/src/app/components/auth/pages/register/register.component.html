@@ -1,0 +1,64 @@
+<form
+  class="container"
+  autocomplete="off"
+  [formGroup]="myform"
+  (ngSubmit)="register()"
+>
+  <div class="logInContainer">
+    <h2>Register</h2>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nick Name</mat-label>
+      <input
+        matInput
+        type="email"
+        formControlName="name"
+        placeholder="Enter your name"
+        required
+        required="true"
+      />
+
+      <mat-error *ngIf="getErrorMessage('name')"
+        >Name more than 3 characters</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>New email</mat-label>
+      <input
+        matInput
+        type="email"
+        formControlName="email"
+        placeholder="Enter your email"
+        required
+        required="true"
+      />
+      <mat-error *ngIf="getErrorMessage('email')"
+        >Enter a valid email</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>New password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="password"
+        placeholder="Enter your password"
+        required
+        required="true"
+      />
+      <mat-error *ngIf="getErrorMessage('password')"
+        >Password more than 6 characters</mat-error
+      >
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="myform.invalid">
+      Create new account
+    </button>
+
+    <div class="conteiner-account">
+      <span> Already have an account? </span>
+      <br />
+      <a routerLink="/login">Login</a>
+    </div>
+  </div>
+</form>

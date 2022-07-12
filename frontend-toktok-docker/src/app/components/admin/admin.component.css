@@ -1,0 +1,10 @@
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+app-add-new-room {
+  width: 50%;
+}
+app-room {
+  /* display: flex; */
+}
