@@ -10,16 +10,7 @@ This app we will be using:
 
 #### To start the application
 
-Frontend part:
-Inside /frontend-toktok-docker
 
-Step 1: docker build -t front-toktok -f Dockerfile front .
-Step 2: docker run -it -p 4200:4200 front-toktok
+**To start The Docker-Compose:**
 
-Backend part:
-Inside /back-toktok-docker
-
-1- docker-compose up --build -d
-
-<!-- 1- docker build -t back-toktok -f Dockerfile back
-2- docker run -it -p 3000:3000 back-toktok -->
+- `docker-compose up --build -d`
